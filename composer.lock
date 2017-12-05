@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b77b67a455f8c99a46b21f72fda44dc",
-    "content-hash": "fe72bab82c26072dc006c828076816b7",
+    "hash": "83ace6bef80456d33ab6081593869b5c",
+    "content-hash": "50593c916a088d2a0198755d17fd25ae",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -167,6 +167,39 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16 21:13:23"
+        },
+        {
+            "name": "div/yii2-geoip",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/div-production/yii2-geoip.git",
+                "reference": "95a5d38c744df1919881fa703caf52338eb43020"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/div-production/yii2-geoip/zipball/95a5d38c744df1919881fa703caf52338eb43020",
+                "reference": "95a5d38c744df1919881fa703caf52338eb43020",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "div\\geoip\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vladimir Deryabin",
+                    "email": "backend@div26.ru"
+                }
+            ],
+            "description": "Yii2 расширение для определения города пользователя (используется сервис ipgeobase.ru)",
+            "time": "2017-04-29 16:42:02"
         },
         {
             "name": "ezyang/htmlpurifier",

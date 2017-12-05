@@ -3,6 +3,7 @@
 namespace app\bootstrap;
 
 use app\models\repositories\NewsViewRepository;
+use app\models\services\GeoService;
 use app\models\services\NewsViewService;
 use app\models\storage\NewsViewSessionStorage;
 use yii\base\Application;
@@ -22,7 +23,8 @@ class SetUp implements BootstrapInterface
         $container->setSingleton(NewsViewService::class, [], [
             date('Y-m-d'),
             new NewsViewRepository(),
-            new NewsViewSessionStorage()
+            new NewsViewSessionStorage(),
+            new GeoService()
         ]);
     }
 }

@@ -38,7 +38,6 @@ class SiteController extends Controller
         if (!Yii::$app->session->get('click')) {
             $this->viewsSerivice->view($id);
         }
-        
         Yii::$app->session->set('click', true);
         return $this->render('news', compact('news'));
     }

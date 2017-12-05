@@ -45,6 +45,10 @@ $config = [
             ],
         ],
         'db' => $db,
+        'geo' => [
+            'class' => 'div\geoip\Geo',
+            'cityClass' => 'app\models\City' // модель города
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
