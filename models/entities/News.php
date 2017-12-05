@@ -10,7 +10,7 @@ use Yii;
  * @property integer $id
  * @property string $text
  *
- * @property Click[] $clicks
+ * @property NewsView[] $clicks
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -48,6 +48,6 @@ class News extends \yii\db\ActiveRecord
      */
     public function getClicks()
     {
-        return $this->hasMany(Click::className(), ['news_id' => 'id']);
+        return $this->hasMany(NewsView::className(), ['news_id' => 'id']);
     }
 }

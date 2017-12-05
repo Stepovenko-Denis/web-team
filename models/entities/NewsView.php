@@ -16,14 +16,34 @@ use Yii;
  *
  * @property News $news
  */
-class Click extends \yii\db\ActiveRecord
+class NewsView extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%clicks}}';
+        return '{{%news_views}}';
+    }
+
+    public static function create($newsId, $countryCode, $date)
+    {
+        $view = new self();
+        $view->news_id = $newsId;
+        $view->country_code = $countryCode;
+        $view->date = $date;
+        return $view;
+    }
+
+    public function click()
+    {
+        $this->clicks += 1;
+    }
+
+    public function uniqueClick()
+    {
+        $this->click();
+        $this->unique_clicks += 1;
     }
 
     /**
