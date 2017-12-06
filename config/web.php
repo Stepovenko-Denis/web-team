@@ -49,14 +49,14 @@ $config = [
             'class' => 'div\geoip\Geo',
             'cityClass' => 'app\models\City' // модель города
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
