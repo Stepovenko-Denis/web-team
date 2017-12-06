@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\readModels\NewsReadRepository;
+use app\models\readModels\NewsViewReadRepository;
 use app\models\services\NewsViewService;
 use Yii;
 use yii\web\Controller;
@@ -12,14 +13,17 @@ class SiteController extends Controller
 {
     private $news;
     private $viewsSerivice;
+    private $views;
 
     public function __construct($id, $module,
                                 NewsReadRepository $news,
                                 NewsViewService $viewService,
+                                NewsViewReadRepository $views,
                                 array $config = []
     ) {
         $this->viewsSerivice = $viewService;
         $this->news = $news;
+        $this->views = $views;
         parent::__construct( $id, $module, $config );
     }
 
@@ -44,6 +48,7 @@ class SiteController extends Controller
 
     public function actionStats()
     {
-        return $this->render('stats');
+        $dataProvider = $this->views->getAll();
+        return $this->render('stats', compact('dataProvider'));
     }
 }
